@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %} - Yoga Website</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="{{ url_for('index') }}">Home</a>
+      <a href="{{ url_for('about') }}">About</a>
+      <a href="{{ url_for('benefits') }}">Benefits</a>
+      <a href="{{ url_for('types') }}">Types</a>
+      <a href="{{ url_for('postures') }}">Postures</a>
+      <a href="{{ url_for('pranayama') }}">Pranayama</a>
+      <a href="{{ url_for('meditation') }}">Meditation</a>
+      <a href="{{ url_for('precautions') }}">Precautions</a>
+      <a href="{{ url_for('healthconditions') }}">Health Conditions</a>
+      <a href="{{ url_for('diet') }}">Diet</a>
+      <a href="{{ url_for('philosophy') }}">Philosophy</a>
+      <a href="{{ url_for('dailylife') }}">Daily Life</a>
+      <a href="{{ url_for('safetytips') }}">Safety Tips</a>
+      <a href="{{ url_for('resources') }}">Resources</a>
+<a href="{{ url_for('interestingfacts') }}">Interesting Facts</a>
+<a href="{{ url_for('mentalhealth') }}">Mental Health</a>
+<a href="{{ url_for('nervoussystem') }}">Nervous System</a>
+<a href="{{ url_for('chakras') }}">Chakras</a>
+<a href="{{ url_for('agegroups') }}">Age Groups</a>
+<a href="{{ url_for('breath') }}">Breath</a>
+<a href="{{ url_for('pregnancy') }}">Pregnancy</a>
+<a href="{{ url_for('stressmanagement') }}">Stress Management</a>
+<a href="{{ url_for('sleep') }}">Sleep</a>
+<a href="{{ url_for('mindfulness') }}">Mindfulness</a>
+<a href="{{ url_for('flexibility') }}">Flexibility</a>
+<a href="{{ url_for('sportsperformance') }}">Sports Performance</a>
+<a href="{{ url_for('aging') }}">Aging</a>
+<a href="{{ url_for('trauma') }}">Trauma</a>
+<a href="{{ url_for('spirituality') }}">Spirituality</a>
+<a href="{{ url_for('socialjustice') }}">Social Justice</a>
+<a href="{{ url_for('environmentalism') }}">Environmentalism</a>
+<a href="{{ url_for('womenshealth') }}">Women's Health</a>
+<a href="{{ url_for('children') }}">Children</a>
+<a href="{{ url_for('technology') }}">Technology</a>
+<a href="{{ url_for('business') }}">Business</a>
+<a href="{{ url_for('travel') }}">Travel</a>
+</nav>
+
+  </header>
+  <div class="container">
+    {% for message in get_flashed_messages() %}
+        <div class="flash">{{ message }}</div>
+    {% endfor %}
+    {% block content %}{% endblock %}
+  </div>
+<footer>
+    <p>Copyright © 2021 Yoga Website</p>
+    <p>Contact Us: <a href="mailto:info@yogawebsite.com">info@yogawebsite.com</a></p>
+</footer>
+
+</body>
+</html>
